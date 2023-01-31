@@ -1,6 +1,6 @@
 {
   "name": "kinda-type",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A TypeScript utility type implementing a recursive Partial<T> for making mocking in unit tests less painful.",
   "main": "index.js",
   "private": false,
