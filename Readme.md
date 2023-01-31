@@ -2,7 +2,7 @@
 
 For when you want TypeScript to stop yelling at you because your mock is only "kinda" like the real thing.
 
-This takes the built-in TypeScript `Partial<T>` type to the next level by making it recursive, and also allowing it to be assignable to type `T`.
+This takes the built-in TypeScript `Partial<T>` type to the next level by making it recursive.
 
 ## Example
 
@@ -58,7 +58,7 @@ beforeEach(() => {
 
 This greatly harms the readability of your tests, and is generally pretty messy. Why can't we just tell TypeScript to not worry about the type being complete, while still getting type checking and autocompletion for the things you do add to your mocks?
 
-This is where `Kinda<T>` comes in. Kinda tells TypeScript that everything (recursively) is optional, while also telling TypeScript that it adheres to the `T` type. This means that the previous example can now be simplified greatly:
+This is where `Kinda<T>` comes in. Kinda tells TypeScript that everything (recursively) is optional. This means that the previous example can now be simplified greatly:
 
 ```typescript
 let mockA: A;
@@ -68,10 +68,14 @@ beforeEach(() => {
     b: {
       c: {}
     }
-  } as Kinda<A>;
+  } as Kinda<A> as A;
 });
 ```
 
 Now you can focus on your testing and not how to make TypeScript stop yelling at your mocks.
 
 Happy testing!
+
+## Acknowledgement
+
+The implementation of `Kinda<T>` was largely based on the work of Pavel Husakouski from this StackOverflow post: <https://stackoverflow.com/a/64060332/1396477>. Renamed to Kinda from RecursivePartial for brevity.

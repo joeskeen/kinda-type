@@ -1,9 +1,10 @@
 {
   "name": "kinda-type",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A TypeScript utility type implementing a recursive Partial<T> for making mocking in unit tests less painful.",
   "main": "index.js",
   "private": false,
+  "types": "index.d.ts",
   "scripts": {
     "test": "tsc -p ."
   },
