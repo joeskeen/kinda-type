@@ -1,0 +1,14 @@
+{
+  "name": "@joeskeen/kinda-type",
+  "version": "1.0.0",
+  "description": "A TypeScript utility type implementing a recursive Partial<T> for making mocking in unit tests less painful.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc -p ."
+  },
+  "author": "Joe Skeen",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
